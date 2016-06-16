@@ -1,6 +1,6 @@
 fs = require('fs')
 path = require('path')
-appRoot = require('app-root-path')
+appRoot = require('app-root-path').toString()
 
 module.exports =
   initialize: (dir = process.cwd()) ->
