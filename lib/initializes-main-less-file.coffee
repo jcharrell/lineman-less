@@ -5,7 +5,6 @@ appRoot = require('app-root-path').toString()
 module.exports =
   initialize: (dir = process.cwd()) ->
     topDir = appRoot
-    console.log 'appRoot', appRoot
     return unless isInstalledAsDependency(dir, topDir)
     ensureMainLessFileExistsRelativeTo(topDir)
 
