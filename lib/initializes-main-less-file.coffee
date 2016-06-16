@@ -1,10 +1,10 @@
 fs = require('fs')
 path = require('path')
-findsRoot = require('find-root-package')
+appRoot = require('app-root-path')
 
 module.exports =
   initialize: (dir = process.cwd()) ->
-    topDir = findsRoot.findTopPackageJson(dir)
+    topDir = appRoot
     return unless isInstalledAsDependency(dir, topDir)
     ensureMainLessFileExistsRelativeTo(topDir)
 
